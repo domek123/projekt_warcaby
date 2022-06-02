@@ -1,3 +1,2 @@
-# Checkers are made in THREE.js
+# Checkers
 
-Game is multiplayer. Server is made in node.js
