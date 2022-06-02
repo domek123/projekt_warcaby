@@ -1,16 +1,24 @@
 {
-  "name": "testgithubheroku01",
+  "name": "warcaby",
   "version": "1.0.0",
-  "description": "test999",
+  "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.18.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domek123/projekt_warcaby.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domek123/projekt_warcaby/issues"
+  },
+  "homepage": "https://github.com/domek123/projekt_warcaby#readme"
 }

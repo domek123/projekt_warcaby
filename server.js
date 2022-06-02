@@ -9,7 +9,7 @@ app.use(express.static("static"));
 app.use(express.json());
 app.use(
   express.urlencoded({
-    extended: true, isPlaying
+    extended: true,
   })
 );
 
@@ -23,7 +23,7 @@ let currentTab = [
   [1, 0, 1, 0, 1, 0, 1, 0],
   [0, 1, 0, 1, 0, 1, 0, 1],
 ];
-let isPlaying = false;
+let isInteraction = false;
 let posToRemove = null;
 
 let users = [];
@@ -67,9 +67,9 @@ app.get("/reset", (req, res) => {
     [1, 0, 1, 0, 1, 0, 1, 0],
     [0, 1, 0, 1, 0, 1, 0, 1],
   ];
-  isPlaying = false;
+  isInteraction = false;
   isLost = false;
-  res.end(JSON.stringify({ info: "reset" }));
+  res.end(JSON.stringify({ info: "array cleared" }));
 });
 
 app.get("/waiting", (req, res) => {
@@ -93,13 +93,13 @@ app.post("/updateTab", (req, res) => {
     posToRemove = itemToRemove;
     console.log(itemToRemove);
   }
-  isPlaying = true;
+  isInteraction = true;
 
   res.end(JSON.stringify({ currentTab }));
 });
 
 app.get("/firstTry", (req, res) => {
-  res.end(JSON.stringify({ isPlaying, currentTab }));
+  res.end(JSON.stringify({ isInteraction, currentTab }));
 });
 
 app.post("/isEquals", (req, res) => {
